@@ -1,56 +1,58 @@
 var test_arr = [
-    [12,'abc',5,1],
-    [11,'def',6,2],
-    [10,'ghj',7,3],
-    [9,'ijk',8,4]
-]
+  [12, "abc", 5, 1],
+  [11, "def", 6, 2],
+  [10, "ghj", 7, 3],
+  [9, "ijk", 8, 4]
+];
 
 var manage = {
-  'mirror': {
-    y: function(arr){
-      var output = []
-      for (i=0;i<arr[0].length;i++){
-        output.push(arr[i].reverse())
+  mirror: {
+    y: function (arr) {
+      var output = [];
+      for (i = 0; i < arr[0].length; i++) {
+        output.push(arr[i].reverse());
       }
-      return output
+      return output;
     },
-    x: function(arr){
-      var output = arr.reverse()
-      return output
-    },
+    x: function (arr) {
+      var output = arr.reverse();
+      return output;
+    }
   },
-  'rotate': {
-    cc:function(arr){
-      var array = arr.reverse()
-      var output = array[0].map((_, colIndex) => array.map(row => row[colIndex]));
-      return output.reverse()
-      },
-    c:function(arr){
-      var array = arr[0].map((_, colIndex) => arr.map(row => row[colIndex]));
-      var output = []
-      for(i=0;i<array.length;i++){
-        output.push(array[i].reverse())
+  rotate: {
+    cc: function (arr) {
+      var array = arr.reverse();
+      var output = array[0].map((_, colIndex) =>
+        array.map((row) => row[colIndex])
+      );
+      return output.reverse();
+    },
+    c: function (arr) {
+      var array = arr[0].map((_, colIndex) => arr.map((row) => row[colIndex]));
+      var output = [];
+      for (i = 0; i < array.length; i++) {
+        output.push(array[i].reverse());
       }
-      return output
-    },
+      return output;
+    }
   },
-  shuffle: function(arr){
-    var a = arr.join().split(',')
+  shuffle: function (arr) {
+    var a = arr.join().split(",");
     var j, x, i;
     for (i = a.length - 1; i > 0; i--) {
-        j = Math.floor(Math.random() * (i + 1));
-        x = a[i];
-        a[i] = a[j];
-        a[j] = x;
+      j = Math.floor(Math.random() * (i + 1));
+      x = a[i];
+      a[i] = a[j];
+      a[j] = x;
     }
-    var output = []
-    for(i=0;i<arr.length;i++) {
-      output.push(a.slice(i*arr[0].length,(i+1)*arr[0].length,))
+    var output = [];
+    for (i = 0; i < arr.length; i++) {
+      output.push(a.slice(i * arr[0].length, (i + 1) * arr[0].length));
     }
     return output;
   },
-  'sortBy': {
-    row: function(arr, row) {
+  sortBy: {
+    row: function (arr, row) {
       var output = [];
       var list_arr = [];
       var sortBy = [];
@@ -66,12 +68,12 @@ var manage = {
       // get row
       for (i = 0; i < arr.length; i++) {
         sortBy.push(arr[i][row]);
-      } 
+      }
       sortBy.sort();
       sortBy.sort(function (a, b) {
         return a - b;
       });
-    
+
       var temp_arr = [];
       var rem_arr = arr;
       for (i = 0; i < sortBy.length; i++) {
@@ -82,12 +84,19 @@ var manage = {
           }
         }
       }
-    
+
       var output = temp_arr;
       return output;
     }
   },
-  colum: function(){
-    return "Not Working Yet!\n If you still need this, do this:\n 1. rotate Array clockwise\n 2. Sort array by row\n 3. Rotate array counter clokwise"
+  colum: function () {
+    var msg =
+      "Not Working Yet!\n If you still need this, do this:\n 1. rotate Array clockwise\n 2. Sort array by row\n 3. Rotate array counter clokwise";
+    return msg;
+  },
+  help: function () {
+    var msg =
+      "Get further help under: https://github.com/MushroomFX/arr_mngr/blob/main/README.md";
+    return msg;
   }
-}
+};
