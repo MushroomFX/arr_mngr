@@ -57,5 +57,10 @@
 <br></br>
 
 ### **Contact & help**
-> Discord: **[Mushroom#2221](discord.com/users/355012453609897985)**
+#### Help command
+> ```
+> manage.help();
+> ```
 
+Discord: 
+> **[Mushroom#2221](discord.com/users/355012453609897985)**
