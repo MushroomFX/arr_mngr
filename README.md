@@ -56,11 +56,16 @@
 
 <br></br>
 
-### **Contact & help**
+### **Help & Contact**
 #### Help command
 > ```
 > manage.help();
 > ```
+
+#### Modfing the script
+>
+> You can change the function name by renameing the `manage` in the script.
+>
 
 Discord: 
 > **[Mushroom#2221](discord.com/users/355012453609897985)**
