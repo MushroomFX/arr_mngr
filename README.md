@@ -68,4 +68,4 @@
 >
 
 Discord: 
-> **[Mushroom#2221](discord.com/users/355012453609897985)**
+> **[Mushroom#2221](https://discord.com/users/355012453609897985)**
