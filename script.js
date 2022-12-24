@@ -1,10 +1,3 @@
-var test_arr = [
-  [12, "abc", 5, 1],
-  [11, "def", 6, 2],
-  [10, "ghj", 7, 3],
-  [9, "ijk", 8, 4]
-];
-
 var manage = {
   mirror: {
     y: function (arr) {
